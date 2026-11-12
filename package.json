@@ -1,0 +1,14 @@
+{
+  "name": "iskcon-resolve-prototype",
+  "version": "1.0.0",
+  "description": "Interactive prototype of the ISKCON Resolve confidential booking service (fictional sample data, no backend).",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node tests/e2e.js",
+    "test:install": "npx playwright install chromium"
+  },
+  "engines": { "node": ">=18" },
+  "devDependencies": { "playwright": "^1.48.0" }
+}

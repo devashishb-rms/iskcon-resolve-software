@@ -1,0 +1,11 @@
+flowchart LR
+  B["Browser<br/>(all logic runs here)"]
+  subgraph P["public/  — the whole site: index.html, css/, js/"]
+    F["static files"]
+  end
+  A["Option A<br/>node server.js<br/>port 8080"] --> P
+  D["Option B<br/>Docker + nginx<br/>8080 to 80"] --> P
+  S["Option C<br/>Netlify, Cloudflare Pages,<br/>S3 + CloudFront, GitHub Pages"] --> P
+  B -->|"GET only, then nothing"| A
+  B -->|"GET only, then nothing"| D
+  B -->|"GET only, then nothing"| S
